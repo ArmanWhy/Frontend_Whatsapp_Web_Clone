@@ -3,7 +3,9 @@ import axios from "axios";
 import ChatList from "./ChatList";
 import ChatWindow from "./ChatWindow";
 
-const backendUrl = pimport.meta.env.VITE_BACKEND_URL || "http://localhost:5000/api";
+const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+
+
 const ChatPage = () => {
   const [chats, setChats] = useState([]);
   const [selectedChat, setSelectedChat] = useState(null);

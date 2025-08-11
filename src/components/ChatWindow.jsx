@@ -4,7 +4,7 @@ import socket from "../socket";
 import MessageBubble from "./MessageBubble";
 import MessageInput from "./MessageInput";
 
-const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000/api";
+const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 function ChatWindow({ currentChat, setChats }) {
   const [messages, setMessages] = useState([]);
