@@ -3,7 +3,7 @@ import axios from "axios";
 import ChatList from "./ChatList";
 import ChatWindow from "./ChatWindow";
 
-const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000/api";
+const backendUrl = pimport.meta.env.VITE_BACKEND_URL || "http://localhost:5000/api";
 const ChatPage = () => {
   const [chats, setChats] = useState([]);
   const [selectedChat, setSelectedChat] = useState(null);

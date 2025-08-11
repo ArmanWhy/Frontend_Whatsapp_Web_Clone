@@ -1,11 +1,9 @@
 import { io } from 'socket.io-client';
 
-// Use of env variable with fallback to localhost for local dev
-const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+// Use Vite env variable
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
-console.log("Connecting to Socket.io at:", backendURL);
-
-const socket = io(backendURL, {
+const socket = io(backendUrl, {
     transports: ['websocket', 'polling'],
 });
 
